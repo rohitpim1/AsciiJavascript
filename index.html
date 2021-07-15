@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ascii</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+      <div class="wrapper"></div> 
+        <script>
+            let content = " ";
+            for(var i = 33; i < 128; i++){
+                content += `
+                <div class="box">
+                <h1> ${String.fromCharCode(i)}</h1>
+                
+                <div>
+                <h4>Hex</h4>
+                <p>${i.toString(16)}</p>
+                </div>
+                
+                <div>
+                <h4>Octal</h4>
+                <p>${i.toString(8)}</p>
+                </div>
+                
+                <div>
+                <h4>Bin</h4>
+                <p>${i.toString(2)}</p>
+                </div>
+                
+                </div>
+                `;
+            }
+
+            document.querySelector(".wrapper").innerHTML = content;
+            </script>
+    </body>
+</html>
